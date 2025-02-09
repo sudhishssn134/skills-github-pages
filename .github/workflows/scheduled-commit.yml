@@ -1,0 +1,24 @@
+name: Daily Commit
+
+on:
+  schedule:
+    # Runs at 14:00 (2:00 PM) UTC every day
+    - cron: '0 14 * * *'
+
+jobs:
+  daily-commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Create commit with my email 24f2002533@ds.study.iitm.ac.in
+        run: |
+          echo "Commit triggered on $(date)" > daily_commit.txt
+          git add daily_commit.txt
+          git config --global user.email "24f2002533@ds.study.iitm.ac.in"
+          git config --global user.name "GitHub Actions"
+          git commit -m "Daily commit triggered by GitHub Actions"
+          git push origin main
+          
