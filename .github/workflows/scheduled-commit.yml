@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-      - name: Create commit with my email 24f2002533@ds.study.iitm.ac.in
+      - name: 24f2002533@ds.study.iitm.ac.in
         run: |
           echo "Commit triggered on $(date)" > daily_commit.txt
           git add daily_commit.txt
@@ -21,4 +21,3 @@ jobs:
           git config --global user.name "GitHub Actions"
           git commit -m "Daily commit triggered by GitHub Actions"
           git push origin main
-          
