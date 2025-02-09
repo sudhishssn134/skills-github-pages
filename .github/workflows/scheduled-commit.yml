@@ -1,4 +1,4 @@
-name: Daily Commit
+name: 24f2002533@ds.study.iitm.ac.in
 
 on:
   schedule:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
+      - name: 24f2002533@ds.study.iitm.ac.in
         uses: actions/checkout@v2
         
       - name: 24f2002533@ds.study.iitm.ac.in
